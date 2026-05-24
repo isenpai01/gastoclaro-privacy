@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — GastoClaro</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1DB954;
+    --green-dark: #158a3e;
+    --green-light: #e8f8ee;
+    --black: #0a0a0a;
+    --gray: #4a4a4a;
+    --gray-light: #f5f5f5;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--black);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+
+  .logo-text span { color: var(--green); }
+
+  .hero {
+    background: linear-gradient(135deg, var(--black) 0%, #1a2a1a 100%);
+    padding: 72px 32px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(29,185,84,0.15) 0%, transparent 70%);
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(29,185,84,0.15);
+    border: 1px solid rgba(29,185,84,0.3);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--green); }
+
+  .hero p {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero-meta {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-meta-item .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 64px 32px;
+  }
+
+  .toc {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+  }
+
+  .toc h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    padding-left: 20px;
+  }
+
+  .toc ol li {
+    margin-bottom: 8px;
+  }
+
+  .toc ol li a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .toc ol li a:hover { color: var(--green-dark); }
+
+  .section {
+    margin-bottom: 52px;
+    scroll-margin-top: 100px;
+  }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--green-light);
+  }
+
+  .section p {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .section ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 14px 0;
+  }
+
+  .section ul li {
+    color: var(--gray);
+    font-size: 15px;
+    padding: 10px 0 10px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+  }
+
+  .highlight-box {
+    background: var(--green-light);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .highlight-box .icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .highlight-box p {
+    color: var(--green-dark) !important;
+    font-weight: 500;
+    margin: 0 !important;
+    font-size: 14px !important;
+  }
+
+  .contact-card {
+    background: var(--black);
+    border-radius: 16px;
+    padding: 36px;
+    text-align: center;
+    margin-top: 56px;
+  }
+
+  .contact-card h3 {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .contact-card p {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-card a {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: background 0.2s;
+  }
+
+  .contact-card a:hover { background: var(--green-dark); }
+
+  footer {
+    background: var(--gray-light);
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+    color: var(--gray);
+    border-top: 1px solid #e0e0e0;
+  }
+
+  footer strong { color: var(--black); }
+
+  @media (max-width: 600px) {
+    header { padding: 18px 20px; }
+    .hero { padding: 48px 20px 40px; }
+    .container { padding: 40px 20px; }
+    .contact-card { padding: 28px 20px; }
+    .hero-meta { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-icon">G</div>
+  <div class="logo-text">Gasto<span>Claro</span></div>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Documento Legal</div>
+  <h1>Política de <span>Privacidad</span></h1>
+  <p>Tu privacidad es nuestra prioridad. Aquí explicamos de forma clara cómo manejamos tu información.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><div class="dot"></div> Versión 1.0</div>
+    <div class="hero-meta-item"><div class="dot"></div> Vigente desde: Mayo 2026</div>
+    <div class="hero-meta-item"><div class="dot"></div> Desarrollado por: Juan Joel Feliz Encarnación</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contenido</h3>
+    <ol>
+      <li><a href="#s1">Información que recopilamos</a></li>
+      <li><a href="#s2">Cómo usamos tu información</a></li>
+      <li><a href="#s3">Almacenamiento de datos</a></li>
+      <li><a href="#s4">Compartición de datos</a></li>
+      <li><a href="#s5">Seguridad</a></li>
+      <li><a href="#s6">Tus derechos</a></li>
+      <li><a href="#s7">Menores de edad</a></li>
+      <li><a href="#s8">Cambios a esta política</a></li>
+      <li><a href="#s9">Contacto</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="s1">
+    <div class="section-number">01</div>
+    <h2>Información que recopilamos</h2>
+    <p>GastoClaro recopila únicamente la información necesaria para que la aplicación funcione correctamente. Esta información incluye:</p>
+    <ul>
+      <li>Nombre completo y nombre de usuario proporcionados durante el registro</li>
+      <li>Dirección de correo electrónico para verificación de cuenta y confirmación de cambios</li>
+      <li>Contraseña (almacenada de forma encriptada, nunca en texto plano)</li>
+      <li>Registros de gastos, categorías, montos y fechas ingresados manualmente por el usuario</li>
+      <li>Metas de ahorro y sus depósitos</li>
+      <li>Fotos de recibos adjuntadas por el usuario (almacenadas localmente)</li>
+      <li>Preferencias de configuración: idioma, moneda, tema visual y presupuesto mensual</li>
+    </ul>
+    <div class="highlight-box">
+      <div class="icon">🔒</div>
+      <p>GastoClaro NO recopila datos de ubicación, contactos, historial de navegación ni ningún otro dato ajeno al funcionamiento de la app.</p>
+    </div>
+  </div>
+
+  <div class="section" id="s2">
+    <div class="section-number">02</div>
+    <h2>Cómo usamos tu información</h2>
+    <p>La información recopilada se utiliza exclusivamente para los siguientes fines:</p>
+    <ul>
+      <li>Crear y gestionar tu cuenta de usuario dentro de la aplicación</li>
+      <li>Enviar códigos de verificación de 6 dígitos para validar tu correo y confirmar cambios de perfil</li>
+      <li>Mostrar tu historial de gastos, análisis y metas de ahorro</li>
+      <li>Generar reportes exportables en PDF o Excel a solicitud del usuario</li>
+      <li>Enviar notificaciones locales sobre presupuesto, metas y gastos recurrentes</li>
+      <li>Recordar tus preferencias de idioma, moneda y tema visual</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s3">
+    <div class="section-number">03</div>
+    <h2>Almacenamiento de datos</h2>
+    <p>Todos tus datos son almacenados <strong>localmente en tu dispositivo</strong>. GastoClaro no cuenta con servidores propios ni bases de datos en la nube donde se guarde tu información personal o financiera.</p>
+    <div class="highlight-box">
+      <div class="icon">📱</div>
+      <p>Si desinstala la aplicación o borra los datos del dispositivo, toda la información se eliminará permanentemente y no podrá ser recuperada.</p>
+    </div>
+    <p>Las credenciales de acceso (contraseña) son almacenadas utilizando el sistema de cifrado seguro de Android (EncryptedSharedPreferences / Android Keystore), garantizando que nunca sean accesibles en texto plano.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <div class="section-number">04</div>
+    <h2>Compartición de datos con terceros</h2>
+    <p>GastoClaro <strong>no vende, alquila ni comparte</strong> tu información personal con terceros bajo ninguna circunstancia, con las únicas excepciones siguientes:</p>
+    <ul>
+      <li>Envío de correos electrónicos de verificación a través de un servicio de email transaccional (solo se transmite tu dirección de correo para este fin)</li>
+      <li>Cuando el usuario utiliza la función de exportar y comparte el archivo voluntariamente a través del sistema de compartición nativo de Android</li>
+      <li>Cuando sea requerido por ley o autoridad competente</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s5">
+    <div class="section-number">05</div>
+    <h2>Seguridad</h2>
+    <p>Implementamos múltiples capas de seguridad para proteger tu información:</p>
+    <ul>
+      <li>Contraseñas almacenadas con cifrado mediante Android Keystore</li>
+      <li>Verificación por código de 6 dígitos para registro y cambios de perfil</li>
+      <li>Requisitos de contraseña segura: mayúsculas, caracteres especiales y mínimo 8 caracteres</li>
+      <li>Bloqueo automático de la app tras 5 minutos de inactividad en segundo plano</li>
+      <li>Bloqueo de cuenta por 10 minutos tras 5 intentos fallidos de inicio de sesión</li>
+    </ul>
+    <p>Sin embargo, ningún sistema es 100% infalible. Te recomendamos usar una contraseña única y segura para tu cuenta de GastoClaro.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <div class="section-number">06</div>
+    <h2>Tus derechos</h2>
+    <p>Como usuario de GastoClaro tienes derecho a:</p>
+    <ul>
+      <li>Acceder a toda tu información personal desde la sección "Editar Perfil"</li>
+      <li>Modificar tu nombre, usuario, correo electrónico y contraseña en cualquier momento</li>
+      <li>Eliminar cualquier gasto, meta o registro desde la propia aplicación</li>
+      <li>Eliminar tu cuenta y todos tus datos desinstalando la aplicación</li>
+      <li>Exportar tus datos financieros en formato PDF o Excel</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s7">
+    <div class="section-number">07</div>
+    <h2>Menores de edad</h2>
+    <p>GastoClaro no está dirigida a menores de 13 años. No recopilamos intencionalmente información de menores de edad. Si eres padre o tutor y crees que tu hijo ha proporcionado información personal a través de nuestra app, contáctanos para eliminarla.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <div class="section-number">08</div>
+    <h2>Cambios a esta política</h2>
+    <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cuando realicemos cambios significativos, notificaremos a los usuarios a través de la aplicación. La fecha de la última actualización siempre estará visible al inicio de este documento.</p>
+    <p>El uso continuado de GastoClaro después de cualquier modificación implica la aceptación de la política actualizada.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <div class="section-number">09</div>
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o el manejo de tus datos, puedes contactarnos:</p>
+  </div>
+
+  <div class="contact-card">
+    <h3>¿Tienes alguna pregunta?</h3>
+    <p>Estamos disponibles para resolver cualquier duda sobre tu privacidad y el manejo de tus datos.</p>
+    <a href="mailto:juanfeliz908@gmail.com">juanfeliz908@gmail.com</a>
+    <p style="margin-top:16px; font-size:13px;">Juan Joel Feliz Encarnación — GastoClaro</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 <strong>GastoClaro</strong> — Desarrollado por <strong>Juan Joel Feliz Encarnación</strong>. Todos los derechos reservados.</p>
+  <p style="margin-top:6px;">República Dominicana · Versión 1.0 · Mayo 2026</p>
+</footer>
+
+</body>
+</html>
